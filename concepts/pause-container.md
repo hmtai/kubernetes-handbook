@@ -48,7 +48,7 @@ docker run -d --name pause -p 8880:80 jimmysong/pause-amd64:3.0
 然后再运行一个nginx容器，nginx将为`localhost:2368`创建一个代理。
 
 ```bash
-$ cat <<EOF >> nginx.conff
+$ cat <<EOF >> nginx.conf
 error_log stderr;
 events { worker_connections  1024; }
 http {
